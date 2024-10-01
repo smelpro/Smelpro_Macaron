@@ -1,0 +1,12 @@
+
+0BC703D909DB147A
+0c4f03d909db158c
+temp	 presion 	altitud 	humedad
+0bc2	 03d9 		09db 		14ab
+
+la temperatura se divide entre 100 (unidad °C)
+la presion no se divide (unidad hPa)
+la altitud se divide entre 10 (unidad m.s.n.m)
+la humedad se divide entre 100 (unidad %)
+
+los datos de la trama estan en formato hexadecimal
