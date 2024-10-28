@@ -58,7 +58,7 @@ PubSubClient clientMQTT(espClient);
 void IRAM_ATTR ISR_INT(void);
 void mqtt_callback(char *topic, uint8_t *payload, unsigned int length);
 void WiFi_Connect(void);
-void WiFi_Reconncet(void);
+void WiFi_Reconnect(void);
 void MQTT_Connect(void);
 
 // Variables de aplicacion
@@ -150,7 +150,7 @@ void loop()
   else
   {
     // Reconexion WIFI
-    WiFi_Reconncet();
+    WiFi_Reconnect();
   }
   delay(1000);
 }
@@ -219,7 +219,7 @@ void WiFi_Connect(void)
   Serial.println(WiFi.channel());
 }
 // Función de reconexión pata WiFi
-void WiFi_Reconncet(void)
+void WiFi_Reconnect(void)
 {
   // Desconexión de WiFi
   WiFi.disconnect();

@@ -710,7 +710,7 @@ bool Smelpro_RAK3172::RAK3172_LoraWanRead(int* size_receive, uint8_t *array_byte
     Send_Comand,
     Read_data_gateway
   }state_t;
-  state_t state_machine = Send_Lorawan;
+  state_t state_machine = Emmpty_Buffer;
   bool flag_while = false;
   bool flag_return = false;
   while(flag_while == false)

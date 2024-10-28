@@ -49,7 +49,7 @@ HTTPClient http;
 void IRAM_ATTR Btn_Interrupt (void);
 void printLastOperateStatus(BME::eStatus_t eStatus);
 void WiFi_Connect(void);
-void WiFi_Reconncet(void);
+void WiFi_Reconnect(void);
 
 // Variables de aplicación
 int respuestaHTTP = 0;
@@ -149,7 +149,7 @@ void loop()
     else
     {
       // Reconexión de Wifi en caso de desconexión
-      WiFi_Reconncet();
+      WiFi_Reconnect();
     }
   }
 }
@@ -182,7 +182,7 @@ void WiFi_Connect(void)
   Serial.println(WiFi.channel());
 }
 // Función para reconexión a la red WiFi
-void WiFi_Reconncet(void)
+void WiFi_Reconnect(void)
 {
   // Desconexión de WiFi
   WiFi.disconnect();
