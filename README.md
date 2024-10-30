@@ -1,4 +1,3 @@
-![Smelpro_Macaron](/images/Logo_Macaron.png)
 # 1. Smelpro Macaron 
 Es una placa de desarrollo LoRa, LoRaWAN y Sigfox. Por defecto Smelpro Macaron trabaja en la red LoRa y LoRaWAN, pero, mediante una cambio o actualización de firmware en el RAK3172, puede trabajar en la red de Sigfox. 
 ## 1.1 Comunicación LoRa
@@ -13,7 +12,7 @@ Asia Pacífico: Australia, Hong Kong, Indonesia, Malasia, Nueva Zelanda, Singapu
 
 
 
-![Smelpro_Macaron](/images/Smelpro-Macaron.jpg)
+![Smelpro_Macaron](/images/Inti_Alfa.jpg)
 
 ## 1.2. Caracteristicas Generales
 * Microcontrolador principal: ESP32-S3-WROOM-1
@@ -84,7 +83,7 @@ Asia Pacífico: Australia, Hong Kong, Indonesia, Malasia, Nueva Zelanda, Singapu
 |  Técnologia de transmisión  | UNB (Ultra narrow band) - Sigfox       |
 
 ## 1.5. Pinout
-![Smelpro_Macaron_pinout](/images/Smelpro-Macaron_pinout.png)
+![Smelpro_Macaron_pinout](/images/Inti-Alfa_pinout-3.png)
 
 
 [SMELPRO](https://smelpro.com/)
@@ -104,15 +103,15 @@ Smelpro Macaron dispone de un led RGB de Neopixel, este ejemplo muestra como hac
 ## 2.2 Comunicación Serial con el RAK3172
 La placa de desarrollo presenta dos metodos de comunicación directa con el RAK3172 mediante comandos AT, la principal forma es utilizando el Sketch que tiene por nombre Test_RAK3172_Echo, este ejemplo hace que el ESP32-S3-WROOM-1 se comporte como un depurador serial y de esa forma, brinda al usuario una comunicación directa con el RAK3172 usando el protocolo serial.
 
-![Smelpro_Macaron_tutorial_Test_RAK3172_Echo](/Tutorial/Macaron_Test_RAK3172_Echo.gif)
+![Smelpro_Macaron_tutorial_Test_RAK3172_Echo](/Tutorial/Macaron_Test_RAK3172_Echo_1.gif)
 
 La segunda forma es cambiado de posicion dos jumpers de cortocircuito para poder usar el conector molex de 6 pines
 
-![Smelpro_Macaron_cambio_Jumpers](/Tutorial/Cambio_jumpers_cortocircuito.gif)
+![Smelpro_Macaron_cambio_Jumpers](/Tutorial/cambio_jumpers_cortocircuito.gif)
 
 De esta manera, se podra depurar directamente al RAK3172 por comandos AT usando un conversor de USB a TTL.
 
-![Smelpro_Macaron_Molex_pinout](/images/Smelpro-Macaron_Pinout_Molex.png)
+![Smelpro_Macaron_Molex_pinout](/images/Pinout_Molex_Macaron.png)
 
 ## 2.3 Como registrar a Smelpro Macaron a la red de LoRaWAN
 Para poder registrar un dispositivo a un Gateway, se necesita obtener el DEVEUI y el APPKEY, una forma sencilla es utilizando el ejemplo del tutorial anterior (Smelpro_Macaron - Test_RAK3172_Echo.ino), de esta manera, se pueden obtener dichos parametros enviando los siguientes parametros:
@@ -267,38 +266,7 @@ En el siguiente tutorial se mostrara un ejemplo de comunicacion en modo P2P entr
 ![Smelpro_Macaron_Test_Send_LoRaP2P](/Tutorial/Macaron_Test_Send_LoRaP2P.gif)
 
 ## 3.4. Funcionalidad de Smelpro Macaron para la red de Sigfox
-La libreria Smelpro_Macaron incorpora las funciones necesarias para trabajar en el modo LoRa P2P, LoRaWAN y Sigfox, para hacer la prueba en el modo Sigfox se debe realizar un cambio de firmware en el RAK3172, para ello se deben seguir los siguientes pasos:
-### 3.4.1. Generar el Firmware del RAK3172 para trabajar en el modo Sigfox
-El tranceptor LoRa RAK3172 se basa en un microcontrolador de la serie STM32WL, En la pagina oficial de RakWireless se encuentra un tutorial para migrar ejemplos entre microcontroladores de la serie STM32WL de STMicroelectronics.
-Link: https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Low-Level-Development/#overview
-
-Esta dividido en tres secciones:
-* STM32CubeIDE guide with STM32WL SDK v1.0.0
-* STM32CubeIDE guide with STM32WL SDK v1.2.0
-* STM32CubeIDE guide with STM32WL SDK v1.3.0
-
-En la seccion STM32CubeIDE guide with STM32WL SDK v1.2.0 se encontrará un ejemplo que tiene por nombre Sigfox_AT_Slave, dicho ejemplo esta realizado para el microcontrolador STM32WL55JCI7U, el módulo RAK3172 se basa en el microntrolador STM32WLE5CCU6 y el tutorial basicamente explica como migrar un proyecto entre esos dos microcontroladores. Lo que se tendria que hacer aqui es seguir esos pasos hasta obtener el ejemplo Sigfox_AT_Slave compilado para el microcontrolador STM32WLE5CCU6.
-Una vez terminado se puede probar el nuevo firnware enviando comandos basicos como por ejemplo:
-```javascript
-// Previamente se debe configurar la comunicacion serial a 9600 baudios
-comando enviado: AT
-respuesta RAK3172: OK
-comando enviado: AT+VER=?
-respuesta RAK3172: 
-APPLICATION_VERSION: V1.2.0
-MW_SIGFOX_VERSION:   V1.7.1
-MW_RADIO_VERSION:    V1.2.0
-V2.10.0_SE_FDL_MON
-RF_API_V1.0
-MCU_API_V1.0
-SE_API_V1.11
-MN_API_V2.0.1
-```
-
-### 3.4.2. Generar las credenciales validas (ID Y PAC) para poder trabajar en la red de Sigfox
-Para generar las credenciales validas se deben seguir los pasos que se encuentran en la seccion Personalization and activation (pagina 61) en el siguiente documento oficial de STMicroelectronics: https://www.st.com/resource/en/application_note/an5480-how-to-build-a-sigfox-application-with-stm32cubewl-stmicroelectronics.pdf
-
-En dicho documento tambien se encuentra una descripcion basica de todos los comandos AT para probar el tranceptor RAK3172 con el nuevo Firmware de Sigfox.
+La libreria Smelpro_Macaron incorpora las funciones necesarias para trabajar en el modo LoRa P2P, LoRaWAN y Sigfox.
 
 ### 3.4.3. Registro del dispositivo en la red de Sigfox
 Lo primero que se debe hacer es obtener el ID y el PAC mediante comandos AT, en nuestra libreria Smelpro_Macaron se encuentra un ejemplo basico para obtener el ID y el PAC de fomra sencilla (Test_Sigfox_get_ID_PAC.ino). Una vez obtenido dichos parametros, se podra registrar a la red de Sigfox de las siguientes formas:
