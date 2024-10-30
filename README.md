@@ -1,3 +1,4 @@
+![Smelpro_Macaron](/images/Logo_Macaron.png)
 # 1. Smelpro Macaron 
 Es una placa de desarrollo LoRa, LoRaWAN y Sigfox. Por defecto Smelpro Macaron trabaja en la red LoRa y LoRaWAN, pero, mediante una cambio o actualización de firmware en el RAK3172, puede trabajar en la red de Sigfox. 
 ## 1.1 Comunicación LoRa
@@ -11,8 +12,7 @@ América Latina: Argentina, Chile, Colombia, Costa Rica, Ecuador, El Salvador, G
 Asia Pacífico: Australia, Hong Kong, Indonesia, Malasia, Nueva Zelanda, Singapur, Taiwán, Tailandia.
 
 
-
-![Smelpro_Macaron](/images/Inti_Alfa.jpg)
+![Smelpro_Macaron](/images/Smelpro-Macaron.jpg)
 
 ## 1.2. Caracteristicas Generales
 * Microcontrolador principal: ESP32-S3-WROOM-1
@@ -83,10 +83,7 @@ Asia Pacífico: Australia, Hong Kong, Indonesia, Malasia, Nueva Zelanda, Singapu
 |  Técnologia de transmisión  | UNB (Ultra narrow band) - Sigfox       |
 
 ## 1.5. Pinout
-![Smelpro_Macaron_pinout](/images/Inti-Alfa_pinout-3.png)
-
-
-[SMELPRO](https://smelpro.com/)
+![Smelpro_Macaron_pinout](/images/Smelpro-Macaron_pinout.png)
 
 # 2. Cargar un Sketch a Smelpro Macaron
 * Enchufe el cable USB tipo C al conector con el nombre de UART de la placa Smelpro Macaron y luego conecte a la PC.
@@ -103,7 +100,7 @@ Smelpro Macaron dispone de un led RGB de Neopixel, este ejemplo muestra como hac
 ## 2.2 Comunicación Serial con el RAK3172
 La placa de desarrollo presenta dos metodos de comunicación directa con el RAK3172 mediante comandos AT, la principal forma es utilizando el Sketch que tiene por nombre Test_RAK3172_Echo, este ejemplo hace que el ESP32-S3-WROOM-1 se comporte como un depurador serial y de esa forma, brinda al usuario una comunicación directa con el RAK3172 usando el protocolo serial.
 
-![Smelpro_Macaron_tutorial_Test_RAK3172_Echo](/Tutorial/Macaron_Test_RAK3172_Echo_1.gif)
+![Smelpro_Macaron_tutorial_Test_RAK3172_Echo](/Tutorial/Macaron_Test_RAK3172_Echo.gif)
 
 La segunda forma es cambiado de posicion dos jumpers de cortocircuito para poder usar el conector molex de 6 pines
 
@@ -111,7 +108,7 @@ La segunda forma es cambiado de posicion dos jumpers de cortocircuito para poder
 
 De esta manera, se podra depurar directamente al RAK3172 por comandos AT usando un conversor de USB a TTL.
 
-![Smelpro_Macaron_Molex_pinout](/images/Pinout_Molex_Macaron.png)
+![Smelpro_Macaron_Molex_pinout](/images/Smelpro-Macaron_Pinout_Molex.png)
 
 ## 2.3 Como registrar a Smelpro Macaron a la red de LoRaWAN
 Para poder registrar un dispositivo a un Gateway, se necesita obtener el DEVEUI y el APPKEY, una forma sencilla es utilizando el ejemplo del tutorial anterior (Smelpro_Macaron - Test_RAK3172_Echo.ino), de esta manera, se pueden obtener dichos parametros enviando los siguientes parametros:
@@ -455,3 +452,5 @@ void Blink_Led(uint8_t attemps, uint16_t delay_)
 * Desde el Backend de Sigfox se podra vizualizar y procesar la información, la configuración mas importante a considerar son los Callbacks, donde podra redireccionar los mensajes por medio de HTTP o HTTPS a otros servidores.
 
 ![Smelpro_Macaron_Test_Send_LoRaP2P](/Tutorial/Macaron_Senb_bit_Sigfox.gif)
+
+[SMELPRO](https://smelpro.com/)
