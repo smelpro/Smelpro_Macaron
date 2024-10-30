@@ -12,6 +12,7 @@ América Latina: Argentina, Chile, Colombia, Costa Rica, Ecuador, El Salvador, G
 Asia Pacífico: Australia, Hong Kong, Indonesia, Malasia, Nueva Zelanda, Singapur, Taiwán, Tailandia.
 
 
+
 ![Smelpro_Macaron](/images/Smelpro-Macaron.jpg)
 
 ## 1.2. Caracteristicas Generales
@@ -85,6 +86,7 @@ Asia Pacífico: Australia, Hong Kong, Indonesia, Malasia, Nueva Zelanda, Singapu
 ## 1.5. Pinout
 ![Smelpro_Macaron_pinout](/images/Smelpro-Macaron_pinout.png)
 
+
 # 2. Cargar un Sketch a Smelpro Macaron
 * Enchufe el cable USB tipo C al conector con el nombre de UART de la placa Smelpro Macaron y luego conecte a la PC.
 * Espere a que la PC reconozca al driver que tiene por nombre CP2102
@@ -104,7 +106,7 @@ La placa de desarrollo presenta dos metodos de comunicación directa con el RAK3
 
 La segunda forma es cambiado de posicion dos jumpers de cortocircuito para poder usar el conector molex de 6 pines
 
-![Smelpro_Macaron_cambio_Jumpers](/Tutorial/cambio_jumpers_cortocircuito.gif)
+![Smelpro_Macaron_cambio_Jumpers](/Tutorial/Cambio_jumpers_cortocircuito.gif)
 
 De esta manera, se podra depurar directamente al RAK3172 por comandos AT usando un conversor de USB a TTL.
 
