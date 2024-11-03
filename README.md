@@ -113,7 +113,7 @@ De esta manera, se podra depurar directamente al RAK3172 por comandos AT usando 
 ![Smelpro_Macaron_Molex_pinout](/images/Smelpro-Macaron_Pinout_Molex.png)
 
 ## 2.3 Como registrar a Smelpro Macaron a la red de LoRaWAN
-Para poder registrar un dispositivo a un Gateway, se necesita obtener el DEVEUI y el APPKEY, una forma sencilla es utilizando el ejemplo del tutorial anterior (Smelpro_Macaron - Test_RAK3172_Echo.ino), de esta manera, se pueden obtener dichos parametros enviando los siguientes parametros:
+Para poder registrar un dispositivo a un Gateway, se necesita obtener el DEVEUI y el APPKEY, una forma sencilla es utilizando el ejemplo del tutorial anterior (Smelpro_Macaron - Test_RAK3172_Echo.ino), de esta manera, se pueden obtener dichos parametros enviando los siguientes comandos AT:
 ```javascript
 AT+NWM=?
 AT+APPKEY=?
@@ -144,13 +144,13 @@ Existen diversos metodos de instalar librerias externas:
 * Descomprima este repositorio descargado en formato .ZIP y copie la carpeta dentro de : [Unidad]:\Users[usuario]\Documents\Arduino\libraries
 ### 3.1.2. Opcion 2:
 * Desde el mismo IDE Arduino dirijase a Programa, Incluir Libreria, Añadir biblioteca .ZIP . Localice el repositorio descargado y abrir.
-* Una vez instalado recargue el Ide arduino y podra ver que la libreria se encuentra en la sección de ejemplos.
+* Una vez instalado recargue el IDE arduino y podra ver que la libreria se encuentra en la sección de ejemplos.
 ### 3.1.3. Opcion 3:
 * Abrir el IDE Arduino, y desde el gestor de descargas de Librerias de Arduino buscar "Smelpro_Macaron" y descargalo
 (GIF de la instalacion de la libreria cuando pase los dos dias de prueba que establece arduino como requisito)(opcional).
 
 ## 3.2. Prueba de envio de un mensaje hacia el Gateway en el modo LoRaWAN
-En este ejemplo, se enviará un mensaje constanate al Gateway LoRaWAN.
+En este ejemplo, se enviará un mensaje constante al Gateway LoRaWAN.
 
 ![Smelpro_Macaron_example_LoRaWAN](/images/Busqueda_de_ejemplo_para_enviar_un_dato_por_LORAWAN.png)
 
@@ -275,7 +275,7 @@ Lo primero que se debe hacer es obtener el ID y el PAC mediante comandos AT, en 
 Disponible sólo para paises de: Colombia, Ecuador, Uruguay, Costa Rica, El Salvador, Panamá,
 Ingresar a la pagina Buy Sigfox, Activate my devkit, Seleccionar su País e introducir los codigos ID y PAC: <link> : https://buy.sigfox.com/activate
 
-* Activacion por contacto directo con Unabiz
+* Activación por contacto directo con Unabiz
 
 Si cuentas con una empresa, puedes registrar el dispositivo en el siguiente link: https://docs.google.com/forms/d/e/1FAIpQLSfxpMM65jwkuswvwjMLg_Nq_tgEpG1pNWO-DJAoE64ua6HvbA/viewform
 
