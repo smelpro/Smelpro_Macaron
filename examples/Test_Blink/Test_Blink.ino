@@ -2,12 +2,12 @@
  * Test_Blink.ino
  *
  *  Creado: Nov 1, 2024
- *      Autor: Smelpro
+ *      Autor: Smelpro 
  *
  *  web: www.smelpro.com
  */
 
-#include "Smelpro_Macaron.h"
+#include "Smelpro_Macaron.h"         // Librearia necesaria para la tarjeta
 
 // Se declara la funcipon void, se utiliza el led de prueba ( PIN_LED_BLINK) , el cual es el pin 2
 
